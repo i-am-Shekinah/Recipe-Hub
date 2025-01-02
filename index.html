@@ -10,23 +10,43 @@
 </head>
 
 <body>
-  <section class="container text-gray-600 font-body grid lg:grid-cols-3">
+  <section class="text-gray-600 font-body grid lg:grid-cols-3">
     <header class="bg-white mb-6 lg:mb-0 lg:h-screen lg:col-span-1 text-end">
-      <section class="flex justify-between items-center w-full lg:justify-end py-6 px-6">
+
+
+      <!-- logo + navbar icon -->
+      <section class="relative flex justify-between items-center w-full lg:justify-end py-6 px-6 bg-white z-10">
         <h3 class="font-semibold text-2xl"><a href="#" class="cursor-pointer">Recipe Hub</a></h3>
-        <img src="./public/img/menu-icon.png" alt="Menu icon" class="w-8 h-8 lg:hidden" id="menu-icon">
+        <button aria-label="Toggle Menu">
+          <img src="./public/img/menu-icon.png" alt="Menu icon" class="w-5 h-5 lg:hidden cursor-pointer" id="menu-icon">
+        </button>
       </section>
-      <nav id="nav">
+
+
+      <!-- navbar -->
+      <nav id="nav" class="absolute right-0 transform -translate-y-full transition-transform duration-300 z-0">
+        <!-- <div 
+      id="nav-menu" 
+      class="absolute top-0 left-0 w-full bg-white shadow-md transform -translate-y-full transition-transform duration-300" -->
+        <!-- > -->
+
         <ul class="space-y-2">
-          <li class="flex justify-end pr-6 border-r-4 gap-1 items-center border-primary hover:opacity-60 transition-all duration-300 ease-in cursor-pointer">
+          <li
+            class="flex justify-end pr-6 border-r-4 gap-1 items-center border-primary hover:opacity-60 transition-all duration-300 ease-in cursor-pointer">
             <a href="#" class="px-2">Home</a>
             <img src="./public/img/home-icon.png" alt="home icon" class="w-4 h-4">
           </li>
-          <li class="flex justify-end pr-6 border-r-4 gap-1 items-center border-white hover:opacity-60 transition-all duration-300 ease-in cursor-pointer">
+
+
+          <li
+            class="flex justify-end pr-6 border-r-4 gap-1 items-center border-white hover:opacity-60 transition-all duration-300 ease-in cursor-pointer">
             <a href="#" class="px-2">About</a>
             <img src="./public/img/about-icon.png" alt="about icon" class="w-4 h-4">
           </li>
-          <li class="flex justify-end pr-6 border-r-4 gap-1 items-center border-white hover:opacity-60 transition-all duration-300 ease-in cursor-pointer">
+
+
+          <li
+            class="flex justify-end pr-6 border-r-4 gap-1 items-center border-white hover:opacity-60 transition-all duration-300 ease-in cursor-pointer">
             <a href="#" class="px-2">Contact</a>
             <img src="./public/img/contact-icon.png" alt="contact icon" class="w-4 h-4">
           </li>
@@ -34,6 +54,8 @@
       </nav>
     </header>
 
+
+    <!-- main -->
     <main class="lg:col-span-2 py-5 px-9 bg-gray-50">
       <header>
         <h1>Recipes</h1>
