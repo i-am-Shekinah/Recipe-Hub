@@ -5,7 +5,7 @@
 @tailwind utilities;
 
 .card {
-  @apply text-center md:text-left rounded-md shadow-md cursor-pointer;
+  @apply w-full h-full text-center md:text-left rounded-md shadow-md cursor-pointer;
 } 
 
 .card:hover {
