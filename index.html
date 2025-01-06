@@ -5,20 +5,21 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Recipe Site</title>
-  <link type="image/png" sizes="64x64" rel="icon" href="./public/img/restaurant-icon.png">
+  <link type="image/png" sizes="64x64" rel="icon" href="./public/img/icons/restaurant-icon.png">
   <link rel="stylesheet" href="./public/styles.css">
 </head>
 
 <body>
   <section class="text-gray-600 bg-gray-50 font-body grid lg:grid-cols-3">
-    <header class="bg-white mb-6 lg:mb-0 lg:h-screen lg:col-span-1 text-end filter drop-shadow-lg lg:drop-shadow-2xl">
+    <header
+      class="bg-white mb-6 lg:mb-0 lg:min-h-screen lg:col-span-1 text-end filter drop-shadow-lg lg:drop-shadow-2xl">
 
 
       <!-- logo + navbar icon -->
       <section class="relative flex justify-between items-center w-full lg:justify-end py-6 px-6 bg-white z-10">
         <h3 class="font-semibold text-2xl"><a href="#" class="cursor-pointer">Recipe Hub</a></h3>
         <button aria-label="Toggle Menu">
-          <img src="./public/img/menu-icon.png" alt="Menu icon" class="w-6 h-6 lg:hidden cursor-pointer" id="menu-icon">
+          <img src="./public/img/icons/menu-icon.png" alt="Menu icon" class="w-6 h-6 lg:hidden cursor-pointer" id="menu-icon">
         </button>
       </section>
 
@@ -31,21 +32,21 @@
           <li
             class="flex justify-end pr-6 border-r-4 gap-1 items-center border-primary hover:opacity-60 transition-all duration-300 ease-in cursor-pointer">
             <a href="#" class="px-2">Home</a>
-            <img src="./public/img/home-icon.png" alt="home icon" class="w-4 h-4">
+            <img src="./public/img/icons/home-icon.png" alt="home icon" class="w-4 h-4">
           </li>
 
 
           <li
             class="flex justify-end pr-6 border-r-4 gap-1 items-center border-white hover:opacity-60 transition-all duration-300 ease-in cursor-pointer">
             <a href="#" class="px-2">About</a>
-            <img src="./public/img/about-icon.png" alt="about icon" class="w-4 h-4">
+            <img src="./public/img/icons/about-icon.png" alt="about icon" class="w-4 h-4">
           </li>
 
 
           <li
             class="flex justify-end pr-6 border-r-4 gap-1 items-center border-white hover:opacity-60 transition-all duration-300 ease-in cursor-pointer">
             <a href="#" class="px-2">Contact</a>
-            <img src="./public/img/contact-icon.png" alt="contact icon" class="w-4 h-4">
+            <img src="./public/img/icons/contact-icon.png" alt="contact icon" class="w-4 h-4">
           </li>
         </ul>
       </nav>
@@ -77,24 +78,39 @@
 
       </header> <!-- login, signup, and header text ends here -->
 
-      <article aria-label="latest recipes"> <!-- latest recipes starts here -->
+
+      <article aria-label="latest recipes" class="pt-6"> <!-- latest recipes starts here -->
         <h3 class="pt-6 pb-4 font-semibold">Latest Recipes</h3>
 
-        <section class="flex flex-wrap justify-center md:justify-between gap-4" aria-label="Cards collection for latest recipes"> <!-- cards collection starts here -->
+        <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 w-full"
+          aria-label="Cards collection for latest recipes"> <!-- cards collection starts here -->
 
           <div class="card card:hover" aria-label="coconut jollof rice card">
             <figure>
-              <img src="public/img/coconut-jollof-rice.webp" alt=" coconut jollof rice" class="rounded-tl-md rounded-tr-md">
-              <figcaption class="font-semibold text-sm pt-4 pb-1">Coconut Jollof Rice</figcaption>
-              <p class="text-xs font-light pb-4">Recipe by CocoLof</p>
+              <img src="public/img/dishes/coconut-jollof-rice.webp" alt=" coconut jollof rice"
+                class="rounded-tl-md rounded-tr-md">
+              <figcaption class="font-semibold text-sm pt-4 pb-1 md:ml-4">Coconut Jollof Rice</figcaption>
+              <p class="text-xs font-light pb-4 md:ml-4">Recipe by CocoLof</p>
+            </figure>
+            <img src="public/img/icons/home-icon.png" alt="recipe time">
+          </div>
+
+
+          <div class="card card:hover" aria-label="chicken fried rice card">
+            <figure>
+              <img src="public/img/dishes/chicken-fried-rice.webp" alt=" chicken fried rice"
+                class="rounded-tl-md rounded-tr-md">
+              <figcaption class="font-semibold text-sm pt-4 pb-1 md:ml-4">Chicken Fried Rice</figcaption>
+              <p class="text-xs font-light pb-4 md:ml-4">Recipe by Fricken</p>
             </figure>
           </div>
 
-          <div class="card card:hover" aria-label="coconut jollof rice card">
+          <div class="card card:hover" aria-label="plantain and beans stew card">
             <figure>
-              <img src="public/img/coconut-jollof-rice.webp" alt=" coconut jollof rice" class="rounded-tl-md rounded-tr-md">
-              <figcaption class="font-semibold text-sm pt-4 pb-1">Coconut Jollof Rice</figcaption>
-              <p class="text-xs font-light pb-4">Recipe by CocoLof</p>
+              <img src="public/img/dishes/plantain-and-beans-stew.jpg" alt="plantain and beans stew"
+                class="rounded-tl-md rounded-tr-md">
+              <figcaption class="font-semibold text-sm pt-4 pb-1 md:ml-4">Plantain and Beans Stew</figcaption>
+              <p class="text-xs font-light pb-4 md:ml-4">Recipe by Pleans</p>
             </figure>
           </div>
 
@@ -102,6 +118,43 @@
 
       </article>
 
+
+      <article aria-label="most popular recipes" class="pt-8"> <!-- most popular recipes starts here-->
+
+        <h3 class="pt-6 pb-4 font-semibold">Most Popular Recipes</h3>
+
+        <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 w-full"
+          aria-label="Cards collection for the most popular recipes"> <!-- cards collection starts here -->
+
+          <div class="card card:hover" aria-label="coconut jollof rice card">
+            <figure>
+              <img src="public/img/dishes/coconut-jollof-rice.webp" alt=" coconut jollof rice"
+                class="rounded-tl-md rounded-tr-md">
+              <figcaption class="font-semibold text-sm pt-4 pb-1 md:ml-4">Coconut Jollof Rice</figcaption>
+              <p class="text-xs font-light pb-4 md:ml-4">Recipe by CocoLof</p>
+            </figure>
+          </div>
+
+
+          <div class="card card:hover" aria-label="pounded yam and egusi">
+            <figure>
+              <img src="public/img/dishes/pounded-yam-and-egusi.jpg" alt=" chicken fried rice"
+                class="rounded-tl-md rounded-tr-md">
+              <figcaption class="font-semibold text-sm pt-4 pb-1 md:ml-4">Pounded Yam and Egusi</figcaption>
+              <p class="text-xs font-light pb-4 md:ml-4">Recipe by Yamsi</p>
+            </figure>
+          </div>
+
+          <div class="card card:hover" aria-label="Suya">
+            <figure>
+              <img src="public/img/dishes/suya.jpeg" alt="suya"
+                class="rounded-tl-md rounded-tr-md">
+              <figcaption class="font-semibold text-sm pt-4 pb-1 md:ml-4">Suya</figcaption>
+              <p class="text-xs font-light pb-4 md:ml-4">Recipe by SuyaMan</p>
+            </figure>
+          </div>
+
+      </article> <!-- most popular recipes ends here-->
     </main>
 
 
